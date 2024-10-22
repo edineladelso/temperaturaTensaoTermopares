@@ -1,1 +1,1 @@
-https://edineladelso.github.io/lancamentoTermopares/
+https://edineladelso.github.io/temperaturaTensaoTermopares/
