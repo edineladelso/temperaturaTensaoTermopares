@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversão de Tensão para Temperatura</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,7 +35,7 @@
     </nav>
 
     <!-- Layout principal flexível -->
-    <div class="main-flex min-h-[70vh] flex items-center justify-center md:justify-center" id="mainFlex">
+    <div class="main-flex" id="mainFlex">
         <div class="principal-container text-header" id="painelConversor">
             <h1 class="titulo-principal">Conversão de Tensão para Temperatura</h1>
 
@@ -60,8 +59,7 @@
         </div>
 
         <!-- Painel lateral para Sobre/Tabela -->
-        <div class="painel-lateral hidden md:block md:ml-8 md:max-w-lg" id="painelLateral">
-            <!-- Conteúdo dinâmico via JS -->
+        <div class="painel-lateral hidden" id="painelLateral">
             <div id="painelSobre" class="descricao-container hidden">
                 <button class="btn-fechar" onclick="fecharPainelLateral()">X</button>
                 <div class="descricao-texto">
@@ -310,22 +308,27 @@
         </div>
     </div>
 
-    <footer class="py-4 mt-8 text-center rounded-b-lg bg-[#1a1a40] text-white" style="margin-top: 5%;">
+    <footer class="footer">
         &copy; 2025 Star B - Tecnologia, Programação e Engenharia
         <p>Pagina por: Edinel Mario Adelso.</p>
         <ul style="
-            list-style: none;">
+        list-style: none;
+        display: flex;
+        justify-content: center; gap: 12px;">
             <li>marenguae@gmail.com</li>
             <li>+258878690250</li>
             <li>+258841945821</li>
             <li>
                 <a href="https://wa.me/258878690250?text=Olá,%20podemos%20conversar?%20GitHub" target="_blank">
-                    <img" src="https://img.shields.io/badge/-edineladelso-05122A?style=flat&logo=whatsapp"
-                        alt="whatsapp" />
+                    <img src="https://img.shields.io/badge/-edineladelso-05122A?style=flat&logo=whatsapp" alt="whatsapp" />
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/edineladelso/" target="_blank">
+                    <img src="https://img.shields.io/badge/-edineladelso-05122A?style=flat&logo=github" alt="whatsapp" />
                 </a>
             </li>
         </ul>
-        </p>
     </footer>
 
     <script src="scrypt.js"></script>

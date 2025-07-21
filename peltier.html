@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teoria de Peltier - Star B</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -20,7 +19,7 @@
 <body class="corpo-pagina texto-principal">
     <nav class="menu-bar">
         <div class="menu-container">
-            <a href="index.html" class="logo-site text-2xl font-bold">Star B - Termopares</a>
+            <a href="index.html" class="logo-site">Star B - Termopares</a>
             <div class="menu-desktop">
                 <a href="index.html" class="menu-link">Conversão</a>
                 <a href="seebeck.html" class="menu-link">Teoria Seebeck</a>
@@ -28,80 +27,69 @@
             </div>
         </div>
     </nav>
-    <div class="flex justify-center items-center min-h-[70vh]">
-        <div class="principal-container w-full max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6 fade-in">
-            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-green-600">Teoria de Peltier: O Poder do Calor e da Eletricidade</h1>
-            <p class="text-center mb-8 text-gray-600">
+    <div class="main-flex">
+        <div class="principal-container fade-in" style="max-width: 700px;">
+            <h1 class="titulo-principal">Teoria de Peltier: O Poder do Calor e da Eletricidade</h1>
+            <p class="descricao-texto" style="text-align:center;">
                 Bem-vindo ao universo da Star B, onde a engenharia encontra a inovação, brilhando como uma estrela de categoria B!
             </p>
-
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold mb-4 text-green-600">O que é o Efeito Peltier?</h2>
-                <p class="text-gray-700">
+            <section>
+                <h2 class="subtitulo-tabela">O que é o Efeito Peltier?</h2>
+                <p>
                     O <strong>efeito Peltier</strong>, descoberto em 1834 por Jean Charles Athanase Peltier, é um fenômeno termoelétrico que ocorre quando uma corrente elétrica passa por uma junção de dois materiais diferentes, resultando em aquecimento ou resfriamento, dependendo da direção da corrente. Este efeito é como uma estrela que pode emitir ou absorver energia térmica, tornando-o essencial para aplicações em refrigeração e controle térmico na engenharia.
                 </p>
-                <div class="bg-blue-100 text-blue-900 p-4 rounded-lg mt-4">
+                <div class="highlight">
                     <strong>Pergunta para refletir:</strong> Como o controle de temperatura via efeito Peltier pode melhorar a eficiência de sistemas mecatrônicos, como robôs ou sensores?
                 </div>
             </section>
-
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold mb-4 text-green-600">Princípios Físicos do Efeito Peltier</h2>
-                <p class="text-gray-700">
+            <section>
+                <h2 class="subtitulo-tabela">Princípios Físicos do Efeito Peltier</h2>
+                <p>
                     O efeito Peltier ocorre em uma junção termoelétrica formada por dois materiais, geralmente semicondutores como bismuto-telúrio (Bi₂Te₃). Quando uma corrente elétrica flui pela junção:
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4">
+                <ul>
                     <li>Um lado da junção <strong>absorve calor</strong>, criando um efeito de resfriamento.</li>
                     <li>O outro lado <strong>libera calor</strong>, aquecendo a região.</li>
                 </ul>
-                <p class="text-gray-700">
+                <p>
                     A transferência de calor é governada pela equação:
                 </p>
-                <div class="equation">
-                    Q = Π * I
-                </div>
-                <p class="text-gray-700">
+                <div class="equation">Q = Π * I</div>
+                <p>
                     Onde:
-                    <ul class="list-disc list-inside text-gray-700">
+                    <ul>
                         <li><em>Q</em>: Calor transferido (W)</li>
                         <li><em>Π</em>: Coeficiente de Peltier (V, dependente dos materiais)</li>
                         <li><em>I</em>: Corrente elétrica (A)</li>
                     </ul>
                 </p>
-                <p class="text-gray-700">
+                <p>
                     O coeficiente de Peltier (<em>Π</em>) está relacionado ao coeficiente Seebeck (<em>S</em>) pela relação <em>Π = S * T</em>, onde <em>T</em> é a temperatura absoluta (K).
                 </p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Peltier_effect.svg" alt="Diagrama do Efeito Peltier" class="mx-auto mb-4 rounded shadow-lg w-full max-w-md" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Peltier_effect.svg" alt="Diagrama do Efeito Peltier" class="img-diagram" />
             </section>
-
-            <section class="mb-8">
-                <h2 class="text-2xl font-bold mb-4 text-green-600">Derivação Matemática</h2>
-                <p class="text-gray-700">
+            <section>
+                <h2 class="subtitulo-tabela">Derivação Matemática</h2>
+                <p>
                     A transferência de calor no efeito Peltier é resultado do transporte de portadores de carga através da junção. A densidade de fluxo de calor é dada por:
                 </p>
-                <div class="equation">
-                    q = Π * J
-                </div>
-                <p class="text-gray-700">
+                <div class="equation">q = Π * J</div>
+                <p>
                     Onde <em>q</em> é a densidade de fluxo de calor (W/m²) e <em>J</em> é a densidade de corrente (A/m²). Para um módulo Peltier, o calor total transferido é:
                 </p>
-                <div class="equation">
-                    Q = Π_AB * I
-                </div>
-                <p class="text-gray-700">
+                <div class="equation">Q = Π_AB * I</div>
+                <p>
                     Onde <em>Π_AB</em> é a diferença entre os coeficientes de Peltier dos dois materiais. A eficiência do dispositivo depende da figura de mérito <em>ZT</em>:
                 </p>
-                <div class="equation">
-                    ZT = (S² * σ * T) / κ
-                </div>
-                <p class="text-gray-700">
+                <div class="equation">ZT = (S² * σ * T) / κ</div>
+                <p>
                     Onde <em>σ</em> é a condutividade elétrica e <em>κ</em> é a condutividade térmica. Materiais com alto <em>ZT</em> maximizam a eficiência.
                 </p>
-                <p class="text-gray-600 italic">
+                <p class="descricao-texto" style="font-style:italic;">
                     Como você otimizaria a escolha de materiais para um módulo Peltier em um projeto de refrigeração?
                 </p>
-                <div class="w-full flex justify-center">
-                    <canvas id="peltierChart" class="fade-in max-w-xl"></canvas>
+                <div style="width:100%;display:flex;justify-content:center;">
+                    <canvas id="peltierChart" class="fade-in" style="max-width:500px;"></canvas>
                 </div>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
@@ -130,11 +118,30 @@
                     });
                 </script>
             </section>
-
-            <footer class="py-4 mt-8 text-center rounded-b-lg bg-[#1a1a40] text-white">
-                &copy; 2025 Star B - Tecnologia, Programação e Engenharia
-            </footer>
         </div>
     </div>
+    <footer class="footer">
+        &copy; 2025 Star B - Tecnologia, Programação e Engenharia
+        <p>Pagina por: Edinel Mario Adelso.</p>
+        <ul style="
+            list-style: none;
+            display: flex;
+            justify-content: center; gap: 12px;">
+            <li>marenguae@gmail.com</li>
+            <li>+258878690250</li>
+            <li>+258841945821</li>
+            <li>
+                <a href="https://wa.me/258878690250?text=Olá,%20podemos%20conversar?%20GitHub" target="_blank">
+                    <img src="https://img.shields.io/badge/-edineladelso-05122A?style=flat&logo=whatsapp" alt="whatsapp" />
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/edineladelso/" target="_blank">
+                    <img src="https://img.shields.io/badge/-edineladelso-05122A?style=flat&logo=github" alt="whatsapp" />
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
+</html>
 </html>

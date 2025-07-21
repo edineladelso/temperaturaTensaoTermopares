@@ -40,14 +40,15 @@ function calcularTemperatura() {
 }
 
 function mostrarTabela() {
-    const tipo = document.getElementById("tipoTermopar").value;
-    document.getElementById("tabelaK").classList.add("hidden");
-    document.getElementById("tabelaJ").classList.add("hidden");
-    document.getElementById("tabelaT").classList.add("hidden");
-    document.getElementById("tabelaE").classList.add("hidden");
-
-    document.getElementById(`tabela${tipo}`).classList.remove("hidden");
-    document.getElementById("tabelaTermopares").classList.remove("hidden");
+    // Só mostra a tabela se o painelTabela estiver visível
+    if (!document.getElementById("painelTabela").classList.contains("hidden")) {
+        const tipo = document.getElementById("tipoTermopar").value;
+        document.getElementById("tabelaK").classList.add("hidden");
+        document.getElementById("tabelaJ").classList.add("hidden");
+        document.getElementById("tabelaT").classList.add("hidden");
+        document.getElementById("tabelaE").classList.add("hidden");
+        document.getElementById(`tabela${tipo}`).classList.remove("hidden");
+    }
 }
 
 function mostrarDescricao() {
@@ -55,6 +56,11 @@ function mostrarDescricao() {
     document.getElementById("painelSobre").classList.remove("hidden");
     document.getElementById("painelTabela").classList.add("hidden");
     document.getElementById("mainFlex").classList.add("painel-ativo");
+    // Oculta todas as tabelas
+    document.getElementById("tabelaK").classList.add("hidden");
+    document.getElementById("tabelaJ").classList.add("hidden");
+    document.getElementById("tabelaT").classList.add("hidden");
+    document.getElementById("tabelaE").classList.add("hidden");
 }
 
 function mostrarTabelaPainel() {
@@ -62,7 +68,7 @@ function mostrarTabelaPainel() {
     document.getElementById("painelSobre").classList.add("hidden");
     document.getElementById("painelTabela").classList.remove("hidden");
     document.getElementById("mainFlex").classList.add("painel-ativo");
-    // Mostra a tabela do tipo selecionado
+    // Mostra a tabela do tipo selecionado e oculta as outras
     const tipo = document.getElementById("tipoTermopar").value;
     document.getElementById("tabelaK").classList.add("hidden");
     document.getElementById("tabelaJ").classList.add("hidden");
@@ -76,11 +82,11 @@ function fecharPainelLateral() {
     document.getElementById("painelSobre").classList.add("hidden");
     document.getElementById("painelTabela").classList.add("hidden");
     document.getElementById("mainFlex").classList.remove("painel-ativo");
-}
-
-function mostrarHome() {
-    fecharPainelLateral();
-    // Se quiser esconder outros painéis, pode adicionar mais lógica aqui
+    // Oculta todas as tabelas
+    document.getElementById("tabelaK").classList.add("hidden");
+    document.getElementById("tabelaJ").classList.add("hidden");
+    document.getElementById("tabelaT").classList.add("hidden");
+    document.getElementById("tabelaE").classList.add("hidden");
 }
 
 // O menu mobile é controlado pelo botão ☰ no index.html

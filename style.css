@@ -4,6 +4,8 @@ body,
     min-height: 100vh;
     color: #1a1a40;
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .texto-principal {
@@ -15,6 +17,7 @@ body,
     color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .menu-container {
@@ -28,22 +31,26 @@ body,
 }
 
 .logo-site {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #3b3b80;
     text-decoration: none;
 }
 
 .menu-desktop {
-    display: none;
+    display: flex;
+    gap: 1.5rem;
 }
+
 .menu-mobile-btn {
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
+    display: none;
 }
+
 .menu-link {
     color: #e6e6ff;
     text-decoration: none;
@@ -54,22 +61,23 @@ body,
 .menu-link:hover {
     color: #ffbe0b;
 }
+
 .menu-mobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
 }
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
     .menu-desktop {
-        display: flex !important;
-        gap: 1.5rem;
-    }
-    .menu-mobile-btn {
         display: none;
     }
+    .menu-mobile-btn {
+        display: block;
+    }
     .menu-mobile {
-        display: none !important;
+        display: flex;
     }
 }
 
@@ -79,7 +87,11 @@ body,
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
+}
+
+.painel-lateral.hidden {
+    display: none !important;
 }
 
 .principal-container {
@@ -118,6 +130,7 @@ body,
     color: #1a1a40;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
 .btn-calcular {
@@ -131,6 +144,7 @@ body,
     margin-bottom: 1rem;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 1rem;
 }
 .btn-calcular:hover {
     background: #1a1a40;
@@ -162,6 +176,7 @@ body,
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s;
+    font-size: 1rem;
 }
 .btn-descricao:hover {
     background: #1a1a40;
@@ -188,6 +203,7 @@ body,
     padding: 0.25rem 0.75rem;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 1rem;
 }
 .btn-fechar:hover {
     background: #1a1a40;
@@ -209,6 +225,7 @@ body,
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s;
+    font-size: 1rem;
 }
 .btn-tabela:hover {
     background: #1a1a40;
@@ -257,6 +274,9 @@ body,
 .painel-lateral {
     width: 100%;
     margin-top: 2rem;
+}
+.painel-lateral.hidden {
+    display: none !important;
 }
 @media (min-width: 768px) {
     .main-flex.painel-ativo {
@@ -308,38 +328,26 @@ body,
     color: #1a1a40;
 }
 
-footer,
-.bg-gray-900 {
-    background-color: #1a1a40 !important;
-    color: #fff !important;
-    border-top: 1px solid #3b3b80;
-}
-
-.text-header {
-    color: #1a1a40 !important;
-}
-
-/* Centralização padrão */
-.main-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.img-diagram {
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    max-width: 350px;
     width: 100%;
-    min-height: 80vh;
 }
 
-/* Só desloca para o lado quando painel-ativo */
-@media (min-width: 768px) {
-    .main-flex.painel-ativo {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .principal-container {
-        align-items: stretch;
-        justify-content: flex-start;
-        margin-left: 0;
-        margin-right: 0;
-    }
+.footer {
+    background-color: #1a1a40;
+    color: #fff;
+    border-top: 1px solid #3b3b80;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    margin-top: 5%;
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none !important;
 }
