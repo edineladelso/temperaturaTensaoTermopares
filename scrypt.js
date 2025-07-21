@@ -51,9 +51,36 @@ function mostrarTabela() {
 }
 
 function mostrarDescricao() {
-    document.getElementById("idContainer").classList.remove("hidden");
+    document.getElementById("painelLateral").classList.remove("hidden");
+    document.getElementById("painelSobre").classList.remove("hidden");
+    document.getElementById("painelTabela").classList.add("hidden");
+    document.getElementById("mainFlex").classList.add("painel-ativo");
 }
 
-function ocultarDescricao() {
-    document.getElementById("idContainer").classList.add("hidden");
+function mostrarTabelaPainel() {
+    document.getElementById("painelLateral").classList.remove("hidden");
+    document.getElementById("painelSobre").classList.add("hidden");
+    document.getElementById("painelTabela").classList.remove("hidden");
+    document.getElementById("mainFlex").classList.add("painel-ativo");
+    // Mostra a tabela do tipo selecionado
+    const tipo = document.getElementById("tipoTermopar").value;
+    document.getElementById("tabelaK").classList.add("hidden");
+    document.getElementById("tabelaJ").classList.add("hidden");
+    document.getElementById("tabelaT").classList.add("hidden");
+    document.getElementById("tabelaE").classList.add("hidden");
+    document.getElementById(`tabela${tipo}`).classList.remove("hidden");
 }
+
+function fecharPainelLateral() {
+    document.getElementById("painelLateral").classList.add("hidden");
+    document.getElementById("painelSobre").classList.add("hidden");
+    document.getElementById("painelTabela").classList.add("hidden");
+    document.getElementById("mainFlex").classList.remove("painel-ativo");
+}
+
+function mostrarHome() {
+    fecharPainelLateral();
+    // Se quiser esconder outros painéis, pode adicionar mais lógica aqui
+}
+
+// O menu mobile é controlado pelo botão ☰ no index.html

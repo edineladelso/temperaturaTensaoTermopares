@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria de Seebeck: Transformando Calor em Eletricidade - Star B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="corpo-pagina texto-principal bg-gray-100">
+    <nav class="menu-bar bg-gray-800 text-white">
+        <div class="menu-container">
+            <a href="index.html" class="logo-site text-2xl font-bold">Home</a>
+            <div class="menu-desktop">
+                <a href="index.html" class="menu-link hover:text-green-400">Conversão</a>
+                <a href="seebeck.html" class="menu-link hover:text-green-400">Teoria Seebeck</a>
+                <a href="peltier.html" class="menu-link hover:text-green-400">Teoria Peltier</a>
+            </div>
+        </div>
+    </nav>
+    <div class="principal-container max-w-3xl mx-auto my-8 rounded-lg shadow-lg p-6 bg-white">
+        <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-green-400">Teoria de Seebeck: Transformando Calor em Eletricidade</h1>
+        <p class="text-center mb-8 text-gray-700">
+            Explore o universo da termoeltricidade com a Star B, onde a engenharia brilha como uma estrela de categoria B!
+        </p>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Introdução ao Efeito Seebeck</h2>
+            <p class="text-gray-700">
+                O <strong>efeito Seebeck</strong>, descoberto em 1821 por Thomas Johann Seebeck, é um fenômeno termoelétrico que gera uma voltagem em uma junção de dois materiais diferentes sob um gradiente de temperatura. Como uma estrela convertendo energia térmica em luz, o efeito Seebeck transforma calor em eletricidade, sendo fundamental para geradores termoelétricos e sensores de temperatura.
+            </p>
+            <div class="bg-blue-100 text-blue-900 p-4 rounded-lg mt-4">
+                <strong>Por que isso importa?</strong> Em aplicações de engenharia, como sistemas mecatrônicos ou recuperação de energia, o efeito Seebeck oferece soluções sustentáveis e eficientes.
+            </div>
+            <p class="text-gray-600 italic mt-4">
+                Como você acha que a conversão de calor em eletricidade pode impactar projetos como o Projeto Sparcs ou sistemas de controle?
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Princípios Físicos do Efeito Seebeck</h2>
+            <p class="text-gray-700">
+                O efeito Seebeck ocorre devido ao movimento de portadores de carga (elétrons ou lacunas) em resposta a um gradiente térmico. Quando dois materiais, como cobre e constantean, formam uma junção com temperaturas diferentes, os portadores migram do lado quente para o frio, gerando uma voltagem.
+            </p>
+            <p class="text-gray-700">
+                A voltagem gerada é dada por:
+            </p>
+            <div class="equation">
+                V = S * (T_h - T_c)
+            </div>
+            <p class="text-gray-700">
+                Onde:
+                <ul class="list-disc list-inside text-gray-700">
+                    <li><em>V</em>: Voltagem gerada (V)</li>
+                    <li><em>S</em>: Coeficiente Seebeck (V/K)</li>
+                    <li><em>T_h</em>: Temperatura do lado quente (K)</li>
+                    <li><em>T_c</em>: Temperatura do lado frio (K)</li>
+                </ul>
+            </p>
+            <p class="text-gray-700">
+                Materiais como bismuto-telúrio (Bi₂Te₃) são amplamente usados devido ao seu alto coeficiente Seebeck.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Seebeck_effect.svg" alt="Diagrama do Efeito Seebeck" class="mx-auto mb-4 rounded shadow-lg w-full max-w-md" />
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Derivação Matemática</h2>
+            <p class="text-gray-700">
+                A voltagem termoelétrica surge do fluxo de portadores de carga induzido pelo gradiente térmico. A densidade de corrente é dada por:
+            </p>
+            <div class="equation">
+                J = σ * (-∇V - S * ∇T)
+            </div>
+            <p class="text-gray-700">
+                Onde:
+                <ul class="list-disc list-inside text-gray-700">
+                    <li><em>J</em>: Densidade de corrente (A/m²)</li>
+                    <li><em>σ</em>: Condutividade elétrica (S/m)</li>
+                    <li><em>∇V</em>: Gradiente de potencial elétrico</li>
+                    <li><em>S</em>: Coeficiente Seebeck</li>
+                    <li><em>∇T</em>: Gradiente de temperatura</li>
+                </ul>
+            </p>
+            <p class="text-gray-700">
+                Em circuito aberto (J = 0), obtemos:
+            </p>
+            <div class="equation">
+                ∇V = -S * ∇T
+            </div>
+            <p class="text-gray-700">
+                Integrando ao longo do termopar:
+            </p>
+            <div class="equation">
+                V = ∫(S_A - S_B) dT
+            </div>
+            <p class="text-gray-700">
+                Para uma diferença de temperatura constante:
+            </p>
+            <div class="equation">
+                V ≈ (S_A - S_B) * (T_h - T_c)
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Eficiência de Geradores Termoelétricos</h2>
+            <p class="text-gray-700">
+                A eficiência de um TEG depende da figura de mérito <em>ZT</em>:
+            </p>
+            <div class="equation">
+                ZT = (S² * σ * T) / κ
+            </div>
+            <p class="text-gray-700">
+                Onde <em>κ</em> é a condutividade térmica (W/m·K). Materiais com alto <em>ZT</em> (>1) são ideais.
+            </p>
+            <p class="text-gray-600 italic">
+                Como você otimizaria a escolha de materiais para um TEG em mecatrônica?
+            </p>
+            <canvas id="ztChart" class="fade-in"></canvas>
+            <script>
+                const ctx = document.getElementById('ztChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['300K', '400K', '500K', '600K'],
+                        datasets: [
+                            {
+                                label: 'Bi₂Te₃',
+                                data: [0.8, 1.0, 1.2, 1.1],
+                                borderColor: '#10b981',
+                                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                                fill: true
+                            },
+                            {
+                                label: 'PbTe',
+                                data: [0.6, 0.9, 1.1, 1.0],
+                                borderColor: '#3b82f6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                                fill: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { labels: { color: '#e5e7eb' } } },
+                        scales: {
+                            x: { title: { display: true, text: 'Temperatura (K)', color: '#e5e7eb' } },
+                            y: { title: { display: true, text: 'Figura de Mérito (ZT)', color: '#e5e7eb' }, beginAtZero: true }
+                        }
+                    }
+                });
+            </script>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">História e Descoberta</h2>
+            <p class="text-gray-700">
+                Thomas Seebeck descobriu o efeito em 1821, observando a deflexão de uma bússola perto de uma junção de metais com temperaturas diferentes. Inicialmente interpretado como magnetismo, o fenômeno foi reconhecido como uma voltagem termoelétrica, lançando as bases da termoeltricidade.
+            </p>
+            <div class="bg-blue-100 text-blue-900 p-4 rounded-lg mt-4">
+                <strong>Curiosidade:</strong> Termopares baseados no efeito Seebeck são essenciais em termômetros industriais.
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Aplicações na Engenharia</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><strong>Geradores Termoelétricos (TEGs):</strong> Convertem calor residual em eletricidade.</li>
+                <li><strong>Sensores de Temperatura:</strong> Termopares para sistemas de controle.</li>
+                <li><strong>Exploração Espacial:</strong> RTGs em sondas como Voyager.</li>
+                <li><strong>Mecatrônica:</strong> Energia para sensores em sistemas embarcados.</li>
+            </ul>
+            <p class="text-gray-600 italic">
+                Como você integraria um TEG em um sistema mecatrônico como o Sparcs?
+            </p>
+            <img src="teg_application.jpg" alt="Gerador termoelétrico em sistema industrial" class="mx-auto mb-4 rounded shadow-lg w-full max-w-md" />
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Simulação com MATLAB</h2>
+            <p class="text-gray-700">
+                Abaixo, um script MATLAB para modelar a voltagem de um termopar:
+            </p>
+            <div class="code-snippet">
+                <pre>
+% Simulação do Efeito Seebeck
+clear all; close all;
+
+% Parâmetros do termopar (Bi2Te3)
+S = 200e-6; % Coeficiente Seebeck (V/K)
+T_c = 300; % Temperatura do lado frio (K)
+T_h = linspace(300, 600, 100); % Temperatura do lado quente (K)
+V = S * (T_h - T_c); % Voltagem gerada (V)
+
+% Plotando o resultado
+figure;
+plot(T_h - T_c, V * 1000, 'LineWidth', 2, 'Color', '#10b981');
+xlabel('Diferença de Temperatura (K)');
+ylabel('Voltagem Gerada (mV)');
+title('Simulação do Efeito Seebeck em um Termopar');
+grid on;
+set(gca, 'FontSize', 12);
+saveas(gcf, 'seebeck_voltage.png');
+                </pre>
+            </div>
+            <img src="seebeck_voltage.png" alt="Gráfico da voltagem gerada" class="mx-auto mb-4 rounded shadow-lg w-full max-w-md" />
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Desafios e Limitações</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><strong>Eficiência:</strong> TEGs têm eficiência de 5-8%.</li>
+                <li><strong>Custo:</strong> Materiais termoelétricos são caros.</li>
+                <li><strong>Gradiente Térmico:</strong> Requer dissipadores eficientes.</li>
+            </ul>
+            <p class="text-gray-600 italic">
+                Como você abordaria essas limitações em um projeto embarcado?
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Comparação com o Efeito Peltier</h2>
+            <p class="text-gray-700">
+                O efeito Seebeck converte calor em eletricidade, enquanto o Peltier usa eletricidade para transferir calor, formando a base da termoeltricidade.
+            </p>
+            <div class="bg-blue-100 text-blue-900 p-4 rounded-lg mt-4">
+                <strong>Exemplo integrado:</strong> Um sistema mecatrônico usa Seebeck para alimentar sensores e Peltier para resfriar componentes.
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-green-400">Junte-se ao Universo Star B!</h2>
+            <p class="text-gray-700">
+                O efeito Seebeck ilumina o caminho para inovações em engenharia. Siga a Star B para mais conteúdo em mecatrônica e programação!
+            </p>
+            <p class="text-gray-600 italic">
+                Desafio: Projete um TEG para um sistema mecatrônico e compartilhe suas ideias!
+            </p>
+            <a href="index.html" class="block text-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md mt-4">Voltar</a>
+        </section>
+    </div>
+    <footer class="py-4 mt-8 text-center rounded-b-lg bg-[#1a1a40] text-white">
+        &copy; 2025 Star B - Tecnologia, Programação e Engenharia
+    </footer>
+</body>
+</html>
